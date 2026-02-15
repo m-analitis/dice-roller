@@ -6,38 +6,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="roll()">
-    <h1>Web Dice Roller</h1>
-    <button onclick="roll()">Roll</button>
+    <header>
+        <h1>Yahtzee Dice Roller</h1>
+    </header>
+    <p>
+        This website lets you roll dice for the game Yahtzee. Press the “Roll” button to roll the dice.
+        If you select a die’s “Keep” checkbox, that die will not be rolled.
+    </p>
+    <div id="button">
+        <button onclick="roll()" autofocus>Roll</button>
+    </div>
     <div id="results">
         <div class="die">
-            <input type="text" id="result1" readonly>
-            <label>
-                <input type="checkbox" name="keep" id="keep1"> Keep
-            </label>
+            <label for="result1"> Die 1: </label><br>
+            <input type="text" id="result1" size="1" readonly><br>
+            <input type="checkbox" name="keep" id="keep1">
+            <label for="keep1"> Keep </label>
         </div>
         <div class="die">
-            <input type="text" id="result2" readonly>
-            <label>
-                <input type="checkbox" name="keep" id="keep2"> Keep
-            </label>
+            <label for="result2"> Die 2: </label><br>
+            <input type="text" id="result2" size="1" readonly><br>
+            <input type="checkbox" name="keep" id="keep2">
+            <label for="keep2"> Keep </label>
         </div>
         <div class="die">
-            <input type="text" id="result3" readonly>
-            <label>
-                <input type="checkbox" name="keep" id="keep3"> Keep
-            </label>
+            <label for="result3"> Die 3: </label><br>
+            <input type="text" id="result3" size="1" readonly><br>
+            <input type="checkbox" name="keep" id="keep3">
+            <label for="keep3"> Keep </label>
         </div>
         <div class="die">
-            <input type="text" id="result4" readonly>
-            <label>
-                <input type="checkbox" name="keep" id="keep4"> Keep
-            </label>
+            <label for="result4"> Die 4: </label><br>
+            <input type="text" id="result4" size="1" readonly><br>
+            <input type="checkbox" name="keep" id="keep4">
+            <label for="keep4"> Keep </label>
         </div>
         <div class="die">
-            <input type="text" id="result5" readonly>
-            <label>
-                <input type="checkbox" name="keep" id="keep5"> Keep
-            </label>
+            <label for="result5"> Die 5: </label><br>
+            <input type="text" id="result5" size="1" readonly><br>
+            <input type="checkbox" name="keep" id="keep5">
+            <label for="keep5"> Keep </label>
         </div>
     </div>
 
