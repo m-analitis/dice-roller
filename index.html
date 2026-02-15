@@ -9,11 +9,36 @@
     <h1>Web Dice Roller</h1>
     <button onclick="roll()">Roll</button>
     <div id="results">
-        <input type="text" class="resultbox" id="result1" readonly>
-        <input type="text" class="resultbox" id="result2" readonly>
-        <input type="text" class="resultbox" id="result3" readonly>
-        <input type="text" class="resultbox" id="result4" readonly>
-        <input type="text" class="resultbox" id="result5" readonly>
+        <div class="die">
+            <input type="text" id="result1" readonly>
+            <label>
+                <input type="checkbox" name="keep" id="keep1"> Keep
+            </label>
+        </div>
+        <div class="die">
+            <input type="text" id="result2" readonly>
+            <label>
+                <input type="checkbox" name="keep" id="keep2"> Keep
+            </label>
+        </div>
+        <div class="die">
+            <input type="text" id="result3" readonly>
+            <label>
+                <input type="checkbox" name="keep" id="keep3"> Keep
+            </label>
+        </div>
+        <div class="die">
+            <input type="text" id="result4" readonly>
+            <label>
+                <input type="checkbox" name="keep" id="keep4"> Keep
+            </label>
+        </div>
+        <div class="die">
+            <input type="text" id="result5" readonly>
+            <label>
+                <input type="checkbox" name="keep" id="keep5"> Keep
+            </label>
+        </div>
     </div>
 
     <script src="main.js"></script>
