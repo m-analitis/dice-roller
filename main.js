@@ -7,21 +7,31 @@ function load() {
 
 // Pings the Node.js server to make sure it is running
 async function wakeup() {
-	const fetchString = url + "/api/ping"
-	const response = await fetch(fetchString)
-	const responseText = await response.text()
-	console.log(responseText)
+	try {
+		const fetchString = url + "/api/ping"
+		const response = await fetch(fetchString)
+		const responseText = await response.text()
+		console.log(responseText)
+	} catch (error) {
+		console.log("There was an error contacting the server:")
+		console.log(error)
+	}
 }
 
 // Requests dice rolls from the Node.js server
 async function roll() {
-	let unchecked = getUnchecked()
-	let num = unchecked.length
-	const fetchString = url + "/roll?num="+num
-	const response = await fetch(fetchString)
-	const rollList = await response.json()
-	for (let i = 0; i < num; i++) {
-		document.getElementById(`result${unchecked[i]}`).setAttribute("value",rollList[i])
+	try {
+		let unchecked = getUnchecked()
+		let num = unchecked.length
+		const fetchString = url + "/roll?num="+num
+		const response = await fetch(fetchString)
+		const rollList = await response.json()
+		for (let i = 0; i < num; i++) {
+			document.getElementById(`result${unchecked[i]}`).setAttribute("value",rollList[i])
+		}
+	} catch (error) {
+		console.log("An error occurred:")
+		console.log(error)
 	}
 }
 
